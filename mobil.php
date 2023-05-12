@@ -79,8 +79,9 @@
 		<td><?php echo number_format($r['hargajual'],0,',','.');?></td>
         <td><?php echo $r['tanggaljual'];?></td>
         <td><?php echo $r['keterangan'];?></td>
-		<td>Koreksi 
-		    Hapus
+		<td>
+		<a href="koreksimobil.php" target="frmutama" class="btn btn-primary">Koreksi</a> 
+		<a href="hapusmobil.php" target="frmutama" class="btn btn-danger" onclick="return confirm('Apakah yakin akan dihapus ?')">Hapus</a>
 		</td>
       </tr>
 	 <?php } while ($r=mysqli_fetch_array($qcari)); ?>
