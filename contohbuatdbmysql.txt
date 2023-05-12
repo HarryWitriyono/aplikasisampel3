@@ -1,0 +1,13 @@
+Tahapan buat database dengan console MySQL :
+1. Buka shell pada xampp control panel
+2. Ketik : mysql -uroot -p
+3. Buat database dengan ketik :
+   create database aplikasisampel3;
+4. Buka database yang sudah dibuat tadi :
+    use aplikasisampel3;
+5. Buat tabel mobil dengan urutan perintah :
+create table mobil (nostnk varchar(20) not null primary key, jenismobil varchar(50) not null, noplat varchar(10) not null, hargajual double(15,0) null, tanggaljual date, keterangan text);
+6. Buat tabel pembeli dengan urutan perintah :
+create table pembeli (NIK varchar(20) not null primary key,namapembeli varchar(40) not null, nohp varchar(20) null, keterangan text);
+7. Buat tabel transaksi dengan urutan perintah :
+create table transaksi (NoNota varchar(5) not null primary key, nostnk varchar(20) not null, NIK varchar(20) not null, tgltransaksi date, besarpembayaran double(15,0) null,keterangan text);
